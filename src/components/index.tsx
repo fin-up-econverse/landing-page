@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import "./index.css";
 import React from "react";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
@@ -88,8 +89,20 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-background to-card">
+          <nav className="w-full py-6 flex justify-around gap-10 text-lg font-medium">
+      <a href="#features" className="hover:text-primary transition-colors">Features</a>
+      <a href="#pricing" className="hover:text-primary transition-colors">Pricing</a>
+      <a
+        href="https://www.linkedin.com/company/finupforgenz/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-primary transition-colors"
+      >
+        Contact
+      </a>
+    </nav>
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden" id="about">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--secondary)/0.1),transparent_50%)]" />
         
@@ -155,14 +168,14 @@ const Index = () => {
                   </div>
                   <p className="text-muted-foreground text-lg">{stat.label}</p>
                 </Card>
-              </motion.div>
+              </motion.div> 
             ))}
           </motion.div>
         </div>
       </section>
 
       {/* Problem Solution Section */}
-      <section className="py-20 relative">
+      <section className="py-20 relative" id="features">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -241,7 +254,7 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 relative">
+      <section className="py-20 relative" id="pricing">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -348,10 +361,17 @@ const Index = () => {
               Financial platform built by Gen Z for Gen Z
             </p>
             <div className="flex justify-center gap-8 text-sm text-muted-foreground">
-              <a href="#" className="hover:text-primary transition-colors">About</a>
-              <a href="#" className="hover:text-primary transition-colors">Features</a>
-              <a href="#" className="hover:text-primary transition-colors">Pricing</a>
-              <a href="#" className="hover:text-primary transition-colors">Contact</a>
+              <a href="#about" className="hover:text-primary transition-colors">About</a>
+              <a href="#features" className="hover:text-primary transition-colors">Features</a>
+              <a href="#pricing" className="hover:text-primary transition-colors">Pricing</a>
+              <a
+        href="https://www.linkedin.com/company/finupforgenz/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-primary transition-colors"
+      >
+        Contact
+      </a>
             </div>
           </div>
         </div>
